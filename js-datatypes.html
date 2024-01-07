@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Data Types Practice</title>
+	<link rel="stylesheet" href="style.css">
+	</head>	
+<body>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1>JavaScript Data Types</h1>
+<script type="text/javascript">
+document.write("Datatypes are the diffrent kinds of data that can used or stored a data in JavaScript programm.");
+</script>
+<br>
+<script type="text/javascript">
+document.write("<b>String, Number, Boolean, Object, Array, undefined, null, Dynamic</b>");
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- String Datatype used to store a charector --</h3>
+<h5>Use single quote ('') when string contain double quote("JS").</h5>
+<h5>Use double quote (" ") when string contain single quote('JS').</h5>
+
+<!-- string example-->
+<p id="sdata"></p>
+<script type="text/javascript">
+const name = "Hello 'JavaScript' "; // using double quote
+const name1 = 'Data "Types"';       // using single quote
+document.getElementById("sdata").innerHTML = name + name1;
+</script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- Integer and Float Datatype --</h3>
+<p>Interger And Floting Point Numbers <span id="ifdata" style="color:red"></span> </p>
+<script type="text/javascript">
+const x = 7;  					//integer datatype used
+const y = 4.5; 					// float datatype used
+document.getElementById("ifdata").innerHTML = x + "<br>" + y;
+</script>
+
+<p>Totak of both numbers: <span id="ifdata2" style="color:red"></span></p>
+<script type="text/javascript">
+const xx = 7;  					//integer datatype used
+const yy = 4.5; 				// float datatype used
+const sum = xx+yy;					
+document.getElementById("ifdata2").innerHTML = sum;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- Combining String and Integer returns a string --</h3>
+<p>Combination of string and number: <span id="stdata" style="color:red"></span></p>
+<script type="text/javascript">
+// const text = 25 + " Pranil";
+// const text1 = " Pranil " + 25;
+const text = "Pranil";
+const text1 = 25;
+document.getElementById("stdata").innerHTML = text + "<br>" + text1;
+</script>
+
+<h3>-- javscript evalutes from left to right, different sequence produce different result</h3>
+<p>Combination of string and number: <span id="stdata2" style="color:red"></span></p>
+<script type="text/javascript">
+const text2 = 10 + 15 + " Pranil";
+const text3 = "Pranil " + 10 + 15;
+document.getElementById("stdata2").innerHTML = text2 + "<br>" + text3;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h3>-- Boolean DataType --</h3>
+<h4>Boolean data type is a logical data type that can have only <span class="red">"True"</span> or <span class="red">"False"</span> as value.</h4>
+<table>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<tr>
+<td>==</td>
+<td>equal to</td>
+<td>if (day == "Monday")</td>
+</tr>
+<tr>
+<td>></td>
+<td>greater than</td>
+<td>if (salary > 9000)</td>
+</tr>
+<tr>
+<td><</td>
+<td>less than</td>
+<td>if (age < 18)</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

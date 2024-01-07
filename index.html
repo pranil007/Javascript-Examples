@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Practice</title>
+	<link rel="stylesheet" href="style.css">
+	</head>	
+
+<body>
+<script type="text/javascript">
+var a, b, c
+a = 10;
+b = 30;
+c = 30;
+result = (a+b-c);
+console.log(result);  //using console log
+// alert(result);   //using alert box
+
+</script>
+
+<script type="text/javascript">
+document.write("Hello Pranil");
+</script>
+
+<!-- chnage the para text using onclick function -->
+<p id="demo1">Change My Data</p> 
+<button onclick='myFunction()'>Click Here</button>
+<script>
+function myFunction(){
+document.getElementById("demo1").innerHTML = "Get Html Data Using Id Functions";
+}
+</script>
+
+
+
+<!-- change background color using onclick js -->
+<div class="box" onclick="changeColor(this)">Tap Me To Change Background Color</div>
+<script>
+function changeColor(element){
+const currentColor = element.style.backgroundColor;
+if (currentColor == "red") {
+element.style.backgroundColor = "yellow";
+}
+else{
+element.style.backgroundColor = "red";
+}
+}
+</script>
+
+<!-- show alert/popup using onclick js -->
+<button id="alrtbtn">Show Popup/Alert</button>
+<script type="text/javascript">
+document.getElementById("alrtbtn").onclick = function(){
+alert("show alert/popup using onclick js")
+}
+</script>
+
+
+<!-- add css properites using onclick js -->
+<p id="css">Pranil Is Good Boy ?</p>
+<button onclick="mycss()">Apply Css</button>
+
+<script type="text/javascript">
+function mycss(){
+document.getElementById("css").style.color="white";
+document.getElementById("css").style.backgroundColor="black"
+document.getElementById("css").style.fontSize="25px";
+document.getElementById("css").style.fontWeight="600";
+document.getElementById("css").style.textTransform="Uppercase";
+document.getElementById("css").style.border="1px solid red";
+document.getElementById("css").style.padding="20px";
+}
+</script>
+
+
+<!-- show hide box on click -->
+<div class="box2" id="box2">Show Hide Box</div>
+<button id="showbox" onclick="showbox()">Show Box</button>
+<button id="Hidebox" onclick="hidebox()">Hide Box</button>
+
+<script type="text/javascript">
+function showbox(){
+document.getElementById("box2").style.display="block";
+}
+function hidebox(){
+document.getElementById("box2").style.display="none";
+}
+</script>
+
+
+<!-- change image using onclick function -->
+<p><a href="" id="href"><img src="coolw.jpg" id="image"> </a></p>
+<button onclick="myimg()">Hit Me</button>
+<script type="text/javascript">
+function myimg(){
+document.getElementById("image").src ="cooly.jpg";
+document.getElementById("href").href ="google.com";
+}
+</script>
+
+
+<!-- sum using html element and const keyword -->
+<p id="sumdata">Sume Data</p>
+<button onclick="sumsum()">Sum+</button>
+<script type="text/javascript">
+function sumsum(){
+const x = 10;
+const y = 20;
+const sum = x+y;
+document.getElementById("sumdata").innerHTML = sum;
+alert(sum);  // using alert 
+// document.write(sum); 
+}
+</script>
+
+<!-- js statement -->
+<p id="st1"></p>
+<p id="st2"></p>
+<script type="text/javascript">
+document.getElementById("st1").innerHTML = "This Is Statement 1";
+document.getElementById("st2").innerHTML = "This Is Statement 2";
+</script>
+
+
+<!-- varible declaration using let keyword-->
+<script type="text/javascript">
+let firstname = "Pranil";
+let lastname = "Bamane";
+let age = 25;
+// document.write("firstname ");  // it will display text firstname
+ document.write(firstname);    //it will display data from firstname
+// document.write("lastname ");  // it will display text lastname
+document.write(lastname);    //it will display data from lastname
+
+document.write(age)
+</script>
+
+<br>
+<!-- constant varible means variables cannot be reassign / not changable -->
+<script type="text/javascript">
+	const city = "Mumbai";
+	// city = "dhdhd";  //can't assign a new value
+	document.write(city);
+</script>
+
+<br>
+<!-- javascript keyword var, function, if, else etc cannot be use as varible name -->
+
+
+<!-- sum using html element and const keyword -->
+<p id="sumconst"></p>
+<script type="text/javascript">
+function addnumbers(num1, num2){
+	const summ = num1 + num2;
+	document.getElementById("sumconst").innerHTML= summ;
+	// document.write(summ);
+}
+addnumbers(5,6);
+</script>
+
+
+
+<!-- show alert/popup using  function onclick js -->
+<button onclick="alertfun()">Show Popup/Alert</button>
+<script type="text/javascript">
+function alertfun(){
+alert("show alert/popup using  function onclick js")
+}
+</script>
+
+
+
+<!-- show return function js -->
+<script type="text/javascript">
+function getFullName(firsttName, lasttName){
+return firsttName + " " + lasttName;
+}
+const fullName = getFullName("Pranil", "Bamane");
+document.write(fullName);
+</script>
+
+
+
+<!-- Function scope: varible declare inside the function are called local varibles. local variables can be used only inside the funcion , if define outside the value datatype is undefined -->
+
+<!-- get value from onclick button -->
+<p id="demoo"></p>
+<button onclick="getage(25)">Get Age</button>
+<script type="text/javascript">
+function getage(age){
+const ageename = "parnil"  // declare inside the function
+document.getElementById("demoo").innerHTML = ageename + " " + age ;
+}
+document.getElementById("demoo").innerHTML = ageename + " " + age ; // outside varible not display
+</script>
+
+
+
+
+<!-- Global variables: are used by any function, global variables are declare outside the function -->
+<p id="gv"></p>
+<button onclick="gvfun()">Call A Global Variables</button>
+<script type="text/javascript">
+const fruit = "Mango";  //declare outside the function
+function gvfun(){
+document.getElementById("gv").innerHTML = "I like a " + fruit;
+}
+
+
+</script>
+
+
+
+<!-- global variables -->
+<p id="gvv"></p>
+<button onclick="gvvfun()">global variables</button>
+<button onclick="gvvvfun()">global variables 2</button>
+
+<script type="text/javascript">
+const cars = "Mercedez Benz"
+function gvvfun(){
+document.getElementById("gvv").innerHTML = "I Like " + cars;
+}
+function gvvvfun(){
+document.getElementById("gvv").innerHTML = "I Dont Like " + cars;
+}
+</script>
+
+
+<!-- Inline Javascript -->
+<button onclick="alert('Inline JavaScript')">Inline JavaScript</button>
+
+
+<!-- local variables -->
+<p id="loc"></p>
+<button onclick="locb()">local variables</button>
+<button onclick="locbb()">local variables 2</button>
+<script type="text/javascript">
+function locb(){
+const subject = "JavaScript"
+document.getElementById("loc").innerHTML = "I Like " + subject;
+}
+function locbb(){
+document.getElementById("locbb").innerHTML = "I Don't Like" + subject;
+}
+</script>
+
+
+<p></p>
+<!-- add css properites using onclick js -->
+<textarea id="area" rows="9" cols="30" placeholder="Write Here"></textarea><br>
+<p>Summery: <span id="summery" style="color:red;"></span></p>
+<button onclick="upper()"> Convert To Uppercase</button>
+<button onclick="lower()">Convert To Lowercase</button>
+<button onclick="capi()">Convert To Capitalize</button>
+<script type="text/javascript">
+const area = document.getElementById("area");
+area.addEventListener("keypress", function () {
+document.getElementById("summery").innerHTML = area.value;	
+});
+
+function upper() {
+	document.getElementById("area").style.textTransform ="Uppercase";
+}
+function lower() {
+	document.getElementById("area").style.textTransform = "Lowercase"
+}
+function capi() {
+	document.getElementById("area").style.textTransform = "Capitalize"
+}
+</script>
+
+
+
+<br>
+<br>
+<!-- <script src="script.js"></script> -->
+</body>
+</html>

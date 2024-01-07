@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Events Practice</title>
+	<link rel="stylesheet" href="style.css">
+	</head>	
+<body>
+
+
+<h1>JavaScript Events Handlers</h1>
+<script type="text/javascript">
+document.write("Hello Pranil JavaScript Events");
+</script>
+
+
+
+<h3>-- Button is Clicked Using Event Handler --</h3>
+<!-- We can perform the task when a Button is Clicked Using Event Handler-->
+<button id="oce">Onclick Event Using Btn Id</button>
+<p id="oced"></p>
+<script type="text/javascript">
+const oce = document.getElementById("oce");
+oce.onclick = function (){
+document.getElementById("oced").innerHTML = "This Is JavaScript onclick Event";
+// alert("This Is JavaScript onclick Event");
+}
+</script>
+
+
+
+<!-- inline event listener -->
+<h3>-- Inline Event Listener --</h3>
+
+<button onclick='alert("This Is Inline Event Listner")'>Inline Event Listner</button>
+
+
+<!-- Onclick event using Myfunction() will call -->
+<h3>-- Onclick event using Myfunction() --</h3>
+<p id="myf"></p>
+<button onclick="myfuc()">Using Button Myfunc</button>
+<script type="text/javascript">
+function myfuc() {
+document.getElementById("myf").innerHTML = "Onclick event using Myfunction() will call";
+// alert("Onclick event using Myfunction() will call");
+}
+</script>
+<br>
+<br>
+
+
+<!-- The addEventListener Method we will add click event -->
+<h3>-- addEventListener Method we will add click event --</h3>
+
+<button id="clickevent">addEventListener Click</button>
+<script type="text/javascript">
+const clickevent = document.getElementById("clickevent");
+clickevent.addEventListener("click", function () {
+	alert("Click Event Triggerd");
+});
+</script>
+
+<!-- More Event types, The change Event -->
+<h3>-- addEventListener More Event types, The change Event --</h3>
+
+<label>Choose A Programming Language
+<select id="lang" name="lang">
+	<option value="React Js">React Js</option>
+	<option value="JavaScript">JavaScript</option>
+	<option value="ASP.Net">ASP.Net</option>
+	<option value="Node JS">Node JS</option>
+</select>
+</label>
+<p>You Selected: <span id="selectedlang" style="color:red;"></span></p>
+
+<script type="text/javascript">
+const select = document.getElementById("lang");
+select.addEventListener("change", function () {
+const val = document.getElementById("lang").value;
+document.getElementById("selectedlang").innerHTML = val;
+
+});
+</script>
+
+
+<!-- mouseover event -->
+<h3>-- addEventListener mouseover event --</h3>
+
+<p id="mousee">JavaScript Mouseover Events</p>
+<script type="text/javascript">
+const elem = document.getElementById("mousee");
+elem.addEventListener("mouseover", function () {
+elem.innerHTML = "Mouse Over Event Apply";
+});
+</script>
+
+
+<!-- The Keypress Event -->
+<h3>-- addEventListener The Keypress Event --</h3>
+
+<textarea id="area"></textarea>
+<p>JavaScript The Keypress Event: <span id="keypresse" style="color:red;"></span></p>
+<script type="text/javascript">
+const area = document.getElementById("area");
+area.addEventListener("keypress", function () {
+document.getElementById("keypresse").innerHTML = area.value;
+});
+</script>
+
+
+
+<!-- Focus and blur Event -->
+<h3>-- addEventListener Focus and Blur Event --</h3>
+
+<textarea id="focusarea" placeholder="JavaScript Focus And Blur Event" rows="5" cols="30"></textarea>
+<script type="text/javascript">
+const focusarea = document.getElementById("focusarea");
+focusarea.addEventListener("focus", function () {
+	document.getElementById("focusarea").style.backgroundColor = "darkslateblue";
+});
+
+focusarea.addEventListener("blur",function () {
+	document.getElementById("focusarea").style.backgroundColor = "white";
+});
+</script>
+
+
+<!-- The Resize Event -->
+<h3>-- The Resize Event --</h3>
+
+<p>Window Width: <span id="windowwidth" style="color:red;"></span></p>
+<p>Window Height: <span id="windowheight" style="color:red;"></span></p>
+<script type="text/javascript">
+window.addEventListener("resize", function () {
+document.getElementById("windowwidth").innerHTML = window.innerWidth;
+document.getElementById("windowheight").innerHTML = window.innerHeight;
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
