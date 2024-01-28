@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	</head>	
+<body>
+
+
+<script type="text/javascript">
+setInterval(()=>{
+document.title = "JavaScript Operetors"
+}, 1000);
+
+setInterval(()=>{
+document.title = "Operetor Examples"
+},1500);
+
+
+</script>
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1>JavaScript Operators</h1>
+<script type="text/javascript">
+document.write("JavaScript Operators are used to assign values, compare values, combine values, perform arithmatic operations etc.");
+</script>
+<br>
+<script type="text/javascript">
+document.write("<b>JavaScript Operators are symbols or set of symbols or keyword</b>");
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- Assignment Operators --</h3>
+<h5>Assignment Operators are used to assign the values</h5>
+
+<!-- string example-->
+<p>Sum of Two Numbers using (+) Operator: <span id="aodata" class="red"></span> </p>
+<script type="text/javascript">
+const ao = 100;  // assign number 100 to ao
+const bo = 120;  // assign number 120 to bo
+const oab = ao + bo; // assign sum of ao + bo to oab
+document.getElementById("aodata").innerHTML = oab;
+// document.write(oab);
+</script>
+
+
+<p>The Addition Assignment Operator add the value of right operand to the value of the varible. use the <span class="red">let</span> keyword so we can reassign its value:  </p>
+<p><span class="red">Operator: </span> x += y   </p>
+<p><span class="red">Equivalent: </span> x = x + y </p>
+<script type="text/javascript">
+let x = 7;
+let y = 10;
+ // xx = x + y;
+ // xy = x += y ;
+let xx = x + y;
+ xy = x += y ;    // assign the value of y to x and then assign result to x
+document.write(xx)+ "<br/>" +
+document.write(xy);
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+
+<h3>-- Arithmatic Operators --</h3>
+<p>Arithmatic Operators are used to perform arithmatic operation like addition, subtraction, multiplication, division between values</p>
+<p><span class="red">Addition: (+) </span> x + y   </p>
+<p><span class="red">Subtraction: (-) </span> x - y   </p>
+<p><span class="red">Multiplication: (*) </span> x * y   </p>
+<p><span class="red">Division: (/) </span> x / y   </p>
+
+
+
+
+<p>Example of Addition</p>
+<script type="text/javascript">
+const a1 = 7;
+const a2 = 14;
+const a1a2 = a1 + a2;
+document.write(a1a2);
+</script>
+
+
+<p>Example of Subtraction <br><span id="sub"></span> </p>
+<script type="text/javascript">
+const b1 = 7;
+const b2 = 77;
+const b1b2 = b1 - b2;
+// document.write(b1b2);
+document.getElementById("sub").innerHTML = b1b2;
+</script>
+
+
+
+<p>Example of Division</p>
+<script type="text/javascript">
+const c1 = 100;
+const c2 = 7;
+const c1c2 = c1 / c2;
+document.write(c1c2);
+</script>
+
+
+<p>Example of Multiplication</p>
+<script type="text/javascript">
+const d1 = 7;
+const d2 = 12;
+const d1d2 = d1 * d2;
+document.write(d1d2);
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+
+<h3>-- String Operators --</h3>
+<p>A String Operators are used to concatinate or add string</p>
+
+
+<p>Example of string Addition Operator: <span id="fullname" class="red"></span>   </p>
+<script type="text/javascript">
+const name1 = "Pranil";
+const name2 = "Bamane";
+const fullname = name1 + name2;
+document.write(fullname);
+document.getElementById("fullname").innerHTML = name1 + name2;
+</script>
+
+
+<p>Example of string addition assignment Operator: <span id="fullname2" class="red"></span>   </p>
+<script type="text/javascript">
+let name3 = "Pranil N";
+let name4 = " Bamane";
+ name3 += name4;
+document.write(name3);
+</script>
+
+
+<p>Example of string Concatinate Operator:  </p>
+<script type="text/javascript">
+const text1 = "Pranil";
+const text2 = "Bamane";
+const text3 = "Is a Good Boy";
+const paragrap = text1 + " " + text2 + " " + text3;
+document.write(paragrap);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+</body>
+</html>

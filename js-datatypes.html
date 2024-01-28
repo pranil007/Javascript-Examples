@@ -2,11 +2,21 @@
 <html lang="en">
 	<head>
 	<meta charset="UTF-8">
-	<title>JavaScript Data Types Practice</title>
+	<title></title>
 	<link rel="stylesheet" href="style.css">
 	</head>	
 <body>
 
+
+<script type="text/javascript">
+setInterval(()=>{
+document.title = "JavaScript Tutorials";
+},1000);
+
+setInterval(()=>{
+document.title = "Data Types Practice";
+},1500);
+</script>
 <!-- -------------------------------------------------------------------------- 
 ------------------------------------------------------------------------------- -->
 
@@ -46,7 +56,7 @@ const y = 4.5; 					// float datatype used
 document.getElementById("ifdata").innerHTML = x + "<br>" + y;
 </script>
 
-<p>Totak of both numbers: <span id="ifdata2" style="color:red"></span></p>
+<p>Total of both numbers: <span id="ifdata2" style="color:red"></span></p>
 <script type="text/javascript">
 const xx = 7;  					//integer datatype used
 const yy = 4.5; 				// float datatype used
@@ -102,21 +112,215 @@ document.getElementById("stdata2").innerHTML = text2 + "<br>" + text3;
 </tr>
 </table>
 
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+
+
+<h3>-- Boolean DataType Example --</h3>
+
+<code>
+const b1 = 7; <br>
+const b2 = 77; <br>
+const bresult = (b1 == b2);<br>
+const bresult2 = (b1 < b2);<br>
+const bresult3 = (b1 > b2);
+</code>
+<p>Are They Equal? <span id="bt" class="red"></span></p>
+<p>Are They Equal? <span id="bt2" class="red"></span></p>
+<p>Are They Equal? <span id="bt3" class="red"></span></p>
+<script type="text/javascript">
+const b1 = 7;
+const b2 = 8;
+const bresult = (b1 == b2);
+const bresult2 = (b1 < b2);
+const bresult3 = (b1 > b2);
+document.getElementById("bt").innerHTML = bresult;
+document.getElementById("bt2").innerHTML = bresult2;
+document.getElementById("bt3").innerHTML = bresult3;
+</script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+
+<h3>-- Boolean DataType True Flase word Example --</h3>
+<code>
+const javascript = true<br>
+const reactjs = false
+</code>
+<p><span class="" id="btf"></span> </p>
+<script type="text/javascript">
+const javascript = true
+const reactjs = false
+document.getElementById("btf").innerHTML = "JavaScript Is easy? " + javascript + "<br>" + "React Js Is easy? " + reactjs;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- Object DataTypes Example --</h3>
+<p>Car Properties: <br /> <span id="cardata" class="red"></span></p>
+<script type="text/javascript">
+const car = {
+brand: "Tata Safari",	
+color: "Black",
+seating: 7,
+year: "2024",
+price: "7 Lack"
+
+};
+document.getElementById("cardata").innerHTML = 
+"Brand: " + car.brand + "<br />" +
+"Color: " + car.color + "<br />" +
+"Seating: " + car.seating + "<br />" +
+"Year: " + car.year + "<br />" +
+"Price: " + car.price + "<br />";
+</script>
 
 
 
 
+<p>New Laptop: <br><span id="objlaptop" class="red"></span></p>
+<script type="text/javascript">
+const laptop = {
+brand: "Lenovo",
+color: "Silver",
+display: "20 Inch",
+processor: "Amd Ryzon",
+ram: "12GB",
+price: 45000,
+model: 2024,
+};
+document.getElementById("objlaptop").innerHTML = 
+"Brand: " + laptop.brand + "<br />" +
+"Color: " + laptop.color + "<br />" +
+"Display: " + laptop.display + "<br />" +
+"Processor: " + laptop.processor + "<br />" +
+"Ram: " + laptop.ram + "<br />" +
+"Price: " + laptop.price + "<br />" +
+"Model: " + laptop.model ;
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h3>-- Arrey DataTypes Example --</h3>
+<p>Arrey List Wil Display: <span id="fruitarrey" class="red"></span></p>
+
+<script type="text/javascript">
+const fruit = ["Apple", "Mongo", "Banana", "Orange"];
+document.getElementById("fruitarrey").innerHTML = fruit;
+document.getElementById("fruitarrey").innerHTML = fruit[2] + " " + fruit[3] + " " + fruit[0] + " " + fruit[1];
+</script>
+
+
+<p>Arrey List Will  Display in reverse order: <span id="subarrey" class="red"></span></p>
+<script type="text/javascript">
+const subarrey = ["Maths", "Science", "History", "Marathi", "English"];
+document.getElementById("subarrey").innerHTML = subarrey[4] + " " + subarrey[3] + " " + subarrey[2] + " " + subarrey[1] + " " + subarrey[0];
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h3>-- Undefined DataTypes Example --</h3>
+<p id="unde"></p>
+<script type="text/javascript">
+let unde;
+document.getElementById("unde").innerHTML = unde;
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- Null DataTypes Example --</h3>
+<p id="nulldt"></p>
+<script type="text/javascript">
+const nulldata = false;
+document.getElementById("nulldt").innerHTML = nulldata;
+</script>
+
+
+<h3>-- using let keyword, so we can reassign value --</h3>
+<p id="letnulldt"></p>
+<script type="text/javascript">
+let fruitdata = "Apple";
+document.getElementById("letnulldt").innerHTML = fruitdata;
+// document.write(fruitdata);
+
+fruitdata = null;
+document.write(fruitdata);
+</script>
 
 
 
 
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h3>-- Dynamic DataTypes Example --</h3>
+<p>variables are not directly associated with a single data type. any varible declared using the let keyword can be reassign to value of all type.</p>
+
+<span class="red">varible declared using const keyword can not reassign</span>
+<p id="dynamicdt"></p>
+<script type="text/javascript">
+let dx = "Dynamic Text";  // dx is a string
+dx = "Text with 7";    // dx is string with integer
+dx = 7;                // dx is string
+dx = true;            // dx is a boolean
+document.write(dx);
+document.getElementById("dynamicdt").innerHTML = dx;
+</script>
+
+
+<h3>-- Typeof operator Example --</h3>
+<span class="red">typeof keyword is used to identify datatype</span>
+<p id="tyoeofop"></p>
+<script type="text/javascript">
+document.getElementById("tyoeofop").innerHTML = 
+typeof "Her Name Is ?" + "<br />" +
+typeof 7 + "<br />" +
+typeof true + "<br />" +
+typeof null + "<br />" +
+typeof undefined + "<br />" +
+typeof "Her Hight is 5.10";
+</script>
 
 
 
+<h3>-- Primitive Data Types Example --</h3>
+there are 4 basic Primitive Data Types: 
+String,
+number,
+boolean,
+null,
+undefined.
 
 
 
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
 
+
+
+<h3>-- Complex Data Types Example --</h3>
+both are the return by the typeof operator <span class="red"></span>
+<p id="complexdt"></p>
+<script type="text/javascript">
+document.getElementById("complexdt").innerHTML =
+typeof {firstname: "Pranil", Lastname: "Bamane", Age: 25} + "<br />" +
+typeof ["jquery", "Reactjs", "html"] + "<br />" +
+typeof null + "<br />" +
+typeof undefined + "<br />" +
+typeof function myfunction(){}
+
+
+</script>
 
 
 </body>

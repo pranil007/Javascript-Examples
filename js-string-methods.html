@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	</head>	
+<body>
+
+
+<script type="text/javascript">
+setInterval(()=>{
+document.title = "JavaScript Tutorials";
+},1000);
+
+setInterval(()=>{
+document.title = "JavaScript String Methods";
+},1500);
+</script>
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1> JavaScript String Methods</h1>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is String? --</h3>
+<script type="text/javascript">
+document.write("String ia set of characters enclosed in quotes");
+</script>
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Strings In javascript</h4>
+<p id="textresult"></p>
+<script type="text/javascript">
+const text = "Hii JavaScript";
+document.write(text);
+const text1 = "'Hii' JavaScript";
+document.write(text1);
+const text2 = 'Hello "JavaScript"';
+document.write(text2);
+const text3 = text + text1 + text2;
+document.write(text3);
+document.getElementById("textresult").innerHTML = text + "<br />" + text1 + "<br />" + text2;
+</script>
+
+
+<h4>Strings Concatination Contextual Example</h4>
+<button onclick="context()">Contextual Example</button>
+<script type="text/javascript">
+function context(){
+const contname = window.prompt("Hello Pranil");
+const str = "Nice to meet you" + contname + "with my friend"
+alert(str);
+}
+</script>
+
+
+<h4>Getting String Length</h4>
+<p>Welcome To JavaScript. .length function will use</p>
+<script type="text/javascript">
+const string = "Welcome To JavaScript";
+const stringlength = string.length;
+document.write(stringlength);
+</script>
+
+
+<h4>Retrieving a charactor from String </h4>
+<p>Welcome To JavaScript. </p>
+<script type="text/javascript">
+const retrive = "Retrieving a charactor from String";
+const retrivestring = retrive[6];
+document.write(retrivestring);
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+
+<h4>Finding a substring in a String This Can be done using <span class="red">indexOf()</span> method</h4>
+<p>How are you?</p>
+<script type="text/javascript">
+const substring = "How can i help of";
+const substringfind = substring.indexOf("help");
+document.write(substringfind);
+</script>
+
+<h4>The <span class="red">LastIndexOf()</span> method returen the index of last occurence of substring in string</h4>
+<script type="text/javascript">
+const lastsubstring = "How can i help of";
+const lastsubstringfind = lastsubstring.LastIndexOf("i");
+document.write(lastsubstringfind);
+</script>
+
+<h4>Both <span class="red">indexOf() and LastIndexOf()</span> method return -1 if there is no occurence found.</h4>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>The Search() Method</h4>
+<p>The <span class="red">Search()</span> Method works similary with <span class="red">indexOf()</span> Method.<br> It returns the index of the first occurence of a text in a string.</p>
+<p>JavaScript Search Method</p>
+<script type="text/javascript">
+const searchs = "JavaScript Search Method";
+const searchresult = searchs.search("Method");
+document.write(searchresult);
+</script>
+
+<p>The only diffrence between <span class="red">Search() and IndexOf()</span>method is that <span class="red">indexOf()</span> Method can not take regular expressions as parameter</p>
+<p>The <span class="red">Search()</span> Method is sensitivwly cased.To search a text insensitively, use a simple regular expression with the <span class="red">/i</span> flag</p>
+<p>search methods returen -1 if text is not found in string</p>
+
+<p>To search a text Insensitively</p>
+<script type="text/javascript">
+const searchsh = "To search a text Insensitively";
+const searchresultt = searchsh.search(/insensitively/i);
+document.write(searchresultt);
+</script>
+<br>
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>The Slice()  Method</h4>
+<p>The slice() Method extracts a section of a string and returns it as anew string</p>
+<p>Lets Extract a text from this string</p>
+<p>slice method can take negative values</p>
+<script>
+const extract = "Lets Extract a text from this string";
+const extractresult = extract.slice(5,20);
+document.write(extractresult);	
+</script>
+<br>
+-----------------------------------------------------------------------------------------------------------------------------
+
+<h4>The Substring() Method</h4>
+<p>The Substring() Method works same way as Search() Method. The Only diffrence is that substring method cannot take -Negative values</p>
+<p>Substring method cannot take negative values</p>
+<script>
+const extractss = "Substring method cannot take negative values";
+const extractresulttt = extractss.slice(0,20);
+document.write(extractresulttt);	
+</script>
+<br>
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+<h4>Ometing the second value</h4>
+<p>Ometing the second value</p>
+<script>
+const extract1 = "Ometing the second value";
+const extractresul1 = extract1.slice(8);
+document.write(extractresul1);	
+</script>
+<br>
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+<h4>Replacing the String inside a string</h4>
+<p>This String will be replced</p>
+<script>
+const replace = "This String will be replced";
+const replaceresul = replace.replace("will be", "Has Been");
+document.write(replaceresul);	
+</script>
+
+
+<p>To Replaced all matching string use a regular expressions with the <span class="red">/g</span> flag</p>
+<p>This String will be replacing replacing</p>
+<script>
+const replace1 = "This String will be replacing replacing";
+const replaceresul1 = replace1.replace(/replacing/g, "replced");
+document.write(replaceresul1);	
+</script>
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+<h4>Trimming the String</h4>
+<p>This String will be Trimm</p>
+<script>
+const trim = "     This String will be Trimm";
+const trimresult = trim.trim();
+document.write(trimresult);	
+</script>
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+<h4>Converting  String to Upper and Lower Case</h4>
+<p>This String will be Converted</p>
+<script>
+const upper = "This String will be Converted To Uppercase ";
+const upperresult = upper.toUpperCase();
+document.write(upperresult);
+
+const lower = "This String will be Converted To Lowercase";
+const lowerresult = lower.toLowerCase();
+document.write(lowerresult);	
+</script>
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+<h4>Concate  String Method</h4>
+<p>This String will be Concatinate</p>
+<script>
+const concate = "This String will be Concatinate";
+const concateresult = concate.concat(" ", "With Js");
+document.write(concateresult);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+
+</body>
+</html>
