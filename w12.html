@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+</head>
+
+<style type="text/css">
+.counternew-background {
+    background-color: #154883;
+    padding: 20px 25px 35px !important;
+    border-radius: 20px;
+    width: 400px;
+}
+.counternew-background .counternewdata p {
+  font-size: 20px;
+}
+.counternew-background .counternewdata p a {
+  font-size: 50px;
+}
+
+.counternew-background .counternewdata .number {
+    background-color: #fff;
+    margin: 2px;
+    color: #a1a3a6;
+    padding: 0px 10px 0px 10px;
+}
+.counternew-background .counternewdata .dots {
+    color: #fff;
+}
+.expired a {
+    background: #000;
+    color: #e55151 !important;
+    text-transform: uppercase;
+    padding: 10px;
+    position: relative;
+font-weight: 600;
+  opacity: 1;
+  text-decoration: none;
+}
+.expired {
+  /*  position: relative;
+    top: 6%;
+    left: 10px;
+*/
+
+position: absolute;
+  top: 1% !important;
+  left: 20px;
+
+}
+
+
+.flash-button{
+    background:blue;
+    padding:5px 10px;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    
+    animation-name: flash;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    //Firefox 1+
+    -webkit-animation-name: flash;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    //Safari 3-4
+    -moz-animation-name: flash;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+}
+
+@keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1.0; }
+}
+
+//Firefox 1+
+@-webkit-keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1.0; }
+}
+
+//Safari 3-4
+@-moz-keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1.0; }
+}
+
+
+
+
+
+
+/*
+ * Animated CSS button
+ * Copyright Alexander Bodin 2019-09-07
+ *
+ * Useage: .class {@import button($button-size, $hue, $sat);}
+ */
+
+.animated-button1 {
+  background: linear-gradient(-30deg, #154883 50%, #154883 50%);
+
+  display: inline-block;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  overflow: hidden;
+
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.animated-button1::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #ad8585;
+  opacity: 0;
+  -webkit-transition: .2s opacity ease-in-out;
+  transition: .2s opacity ease-in-out;
+}
+
+.animated-button1:hover::before {
+  opacity: 0.2;
+}
+
+.animated-button1 span {
+  position: absolute;
+}
+
+.animated-button1 span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(43, 8, 8, 0)), to(#d92626));
+  background: linear-gradient(to left, rgba(43, 8, 8, 0), #d92626);
+  -webkit-animation: 2s animateTop linear infinite;
+          animation: 2s animateTop linear infinite;
+}
+
+@keyframes animateTop {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+.animated-button1 span:nth-child(2) {
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 2px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 8, 0)), to(#d92626));
+  background: linear-gradient(to top, rgba(43, 8, 8, 0), #d92626);
+  -webkit-animation: 2s animateRight linear -1s infinite;
+          animation: 2s animateRight linear -1s infinite;
+}
+
+@keyframes animateRight {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+.animated-button1 span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 8, 0)), to(#d92626));
+  background: linear-gradient(to right, rgba(43, 8, 8, 0), #d92626);
+  -webkit-animation: 2s animateBottom linear infinite;
+          animation: 2s animateBottom linear infinite;
+}
+
+@keyframes animateBottom {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+.animated-button1 span:nth-child(4) {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 2px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 8, 0)), to(#d92626));
+  background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #d92626);
+  -webkit-animation: 2s animateLeft linear -1s infinite;
+          animation: 2s animateLeft linear -1s infinite;
+}
+
+@keyframes animateLeft {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+
+/*# sourceMappingURL=button.css.map */
+</style>
+ 
+
+<body>
+
+    <br>
+
+
+
+<!-- <div class="expired">
+<a href="#" class="animated-button1 flash-button">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  Expired
+
+</a>
+</div> -->
+<div class="counternew">
+<div class="counternew-background animated-button1 flash-button">
+	<span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+   <div class="counternewdata"> 
+    	<p>Expired</p>
+      <p><a class="number">1</a><a class="number">0</a><a class="dots">-</a><a class="number">1</a><a class="number">0</a><a class="dots">-</a><a class="number">2</a><a class="number">3</a></p>
+ 
+
+    </div>
+</div>
+
+</div>
+
+ 
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	</head>	
+<body>
+
+
+<script type="text/javascript">
+setInterval(()=>{
+document.title = "JavaScript Tutorials";
+},1000);
+
+setInterval(()=>{
+document.title = "More Than JavaScript Data Types";
+},1500);
+</script>
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1>More Than JavaScript Data Types</h1>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is an Object? --</h3>
+<script type="text/javascript">
+document.write("An Object is a collection of releted data and functionality");
+</script>
+
+<!-- Object example-->
+<h4>Object Example</h4>
+<p id="objectdata"></p>
+<script type="text/javascript">
+const pranil = {
+name: "pranil bamane",
+age: 25,
+designation: "Software Engineer",
+hobbies: ["Coding", "Cricket", "Reading", "Creative"],
+isavaible: true
+}
+document.getElementById("objectdata").innerHTML = 
+"Name:" + pranil.name + "<br />" +
+"Age:"  + pranil.age + "<br />"  +
+"Designation:" + pranil.designation + "<br />" +
+"Hobbies:" + pranil.hobbies[2] + "<br />" +
+"Is Avaible:" + pranil.isavaible + "<br />"
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Object Example Bracket Notation</h4>
+<p id="objectnotaion"></p>
+<script type="text/javascript">
+const car = {
+color: "Gold",
+brand: "Tata",
+seater: 7,
+issafe: true,
+material: "Steel"
+}
+document.getElementById("objectnotaion").innerHTML = 
+"Color:" + car["color"] + "<br />" +
+"Brand:" + car["brand"] + "<br />" +
+"Seater:" + car["seater"] + "<br />" +
+"Is Safe:" + car["issafe"] + "<br />" +
+"Material:" + car["material"] 
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Object Example using this keyword</h4>
+<p id="showthisdetails"></p>
+<button onclick="students.showdetails()">This.Click</button>
+<script type="text/javascript">
+const students = {
+class: "Class A",
+count: 40,
+teacher: "Adam",
+isstart: true,
+showdetails: function(){
+	document.getElementById("showthisdetails").innerHTML = (this.class + " Contained " + this.count + " students " + this.teacher + " with " + this.isstart );
+// alert(this.class + "is" + this.count + "students" + this.teacher + "yes" + this.isstart );
+}
+}
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Object Example using Objects In Objects</h4>
+<p id="obejctsinobjects"></p>
+<script type="text/javascript">
+const fruits= {
+mango: {
+color: "Yellow",
+taste: "Sweet",
+quantity: 10	
+},
+
+apple: {
+color: "Red",
+taste: "Sweet",
+quantity: 15
+}
+}
+document.getElementById("obejctsinobjects").innerHTML = 
+"Mango Color:" + fruits.mango.color + "<br />" + 
+"Mango Taste:" + fruits.mango.taste + "<br />" +
+"Mango Quantity:" + fruits.mango.quantity + "<br />" + 
+
+"Apple Color:" + fruits.apple.color + "<br />" + 
+"Apple Taste:" + fruits.apple.taste + "<br />" +
+"Apple Quantity:" + fruits.apple.quantity + "<br />" 
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

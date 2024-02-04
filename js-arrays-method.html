@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	</head>	
+<body>
+
+
+<script type="text/javascript">
+setInterval(()=>{
+document.title = "JavaScript Tutorials";
+},1000);
+
+setInterval(()=>{
+document.title = "JavaScript Arrays Methods";
+},1500);
+</script>
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1> JavaScript Arrays Methods</h1>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is an Arrays? --</h3>
+<script type="text/javascript">
+document.write("Array are list-like objects, a single array can store multiple data");
+</script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Arrays In javascript</h4>
+<p id="Arrays"></p>
+<script>
+const fruit = ["Apple", "Banana", "Pineapple", "Mango", "Chiku"];
+// document.write(fruit);
+document.getElementById("Arrays").innerHTML = fruit;
+</script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>The <span class="red">forEach()</span> Method <br> forEach() method is anther way to loop over an array, or access each array element.<br> 
+It Executes a callback function for each array element.</h4>
+<script>
+document.write("Mumbai ", "Pune ", "Chennai" , "Banglore");
+document.write("<br />");
+const cities = new Array ("Mumbai", "Pune", "Chennai", "Banglore");
+// document.write(cities[2]);
+cities.forEach(function (val, i, arr) {
+	document.write(i + ": " + val + "<br />");
+});
+</script>
+<h4>The callback function is invoked with 3 arguments. <br />
+1. The <span class="red">value</span> of the element <br />
+2. The <span class="red">index</span> of the element <br />
+3. The <span class="red">Array </span>itself
+</h4>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Arrays To Strings</h4>
+<p>The <span class="red">join()</span> method create & returna new string by combining all the elements.</p>
+<p>The Elements are seprated by the specified seperator charectar</p>
+<script>
+document.write("Maths ", "Science ", "History ", "Marathi");document.write("<br />");
+
+const subjects = ["Maths", "Science", "History", "Marathi"];
+subjects.join();
+document.write(subjects);
+document.write("<br />");
+const subjects1 = ["Maths", "Science", "History", "Marathi"];
+const sub1 = subjects1.join("=");
+document.write(sub1);
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Strings To Arrays  </h4>
+<p>We can convert Strings To Arrays by using <span class="red">split()</span> method</p>
+<p>The Elements are seprated by the specified seperator charectar</p>
+<script>
+document.write("Pranil is good boy");
+document.write("<br />");
+const string = "Pranil is good boy";
+const stringtoarray = string.split(" ");
+document.write(stringtoarray);
+</script>
+
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Merging Arrays  </h4>
+<p>We can merge Arrays by using <span class="red">concat()</span> method</p>
+<script>
+const merge = ["Car", "Bike", "Trucks", "Trailers"];
+const merge1 = ["Road", "Platform", "Track"];
+const merge2 = ["Subway", "Ocean", "Ship"];
+ const mergearray = merge.concat(merge1, merge2);
+// const mergearray = merge + merge1 + merge2;
+document.write(mergearray);
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Searching of an Arrays  </h4>
+<p>The <span class="red">indexOf()</span> method returns the index of the first occurence of an item in the array</p>
+<script>
+	const searchio = ["Maths", "Science", "Marathi", "English", "Geography"];
+	const searchio1 = searchio.indexOf("Science");
+	document.write(searchio1);
+</script>
+
+<p>The <span class="red">lastindexOf()</span> method returns the index of the last occurence of an item in the array</p>
+<script>
+	const searchlio = ["Maths", "Science", "Marathi", "English", "Geography"];
+	const searchlio1 = searchlio.lastIndexOf("Geography");
+	document.write(searchlio1);
+</script>
+
+<p>both indexOf() and lastindexOf() methods returns -1 if items not found </p>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>The includes() Method  </h4>
+<p><span class="red">includes()</span> method is use to check if a value exists in an array. It return true if value is founded in an array</p>
+<script>
+const inclue = ["Apple", "Banana", "Mango", "Pineapple", "Kiwi"];
+const inclue1 = inclue.includes("Apple");
+document.write(inclue1);
+document.write("<br />");
+const inclue2 = inclue.includes("Apples");
+document.write(inclue2);
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>The <span class="red">slice()</span> Method return a new copy of an array</h4>
+<p>It take Two argumens <br />1. Begin - the index where extraction begins. <br />2. End - the index where the extraction should end. </p>
+<script>
+document.write("Car " , "Bike ", "Truck ", "Trailer ", "Airoplane ", "Train");
+document.write("<br />");
+const slicearray = new Array ("Car", "Bike", "Truck", "Trailer", "Airoplane", "Train");
+const slicemethod = slicearray.slice(1,4);
+document.write(slicemethod);
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>The Spilcing an Array</h4>
+<p><span class="red">spilce()</span> Method is use to change the content of an array by removing or replacing exstting element</p>
+<p>Start - the index where the changing begins <br />
+ deleteCount - the number of the elements to remove & replace fromt the last <br />
+element1 , element2 - the elements to add to the array.
+</p>
+<script>
+const splicearray = ["Javascript", "Jquery", "ReactJs", "AngularJs", "VueJs"];
+// const splicemethod = splicearray.splice(1, 0, "Html", "Css");
+// document.write(splicemethod);
+splicearray.splice(1, 0, "Html", "Css");
+document.write(splicearray);
+</script>
+
+
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Removing an Array item</h4>
+<p><span class="red">spilce()</span> Method is use to remove the element from array</p>
+<script>
+document.write("Puma ", "Adidas ", "Nike ", "Campus ", "Asian");
+document.write("<br />");
+const spl = new Array("Puma", "Adidas", "Nike", "Campus", "Asian");
+spl.splice(2, 4);
+document.write(spl);
+</script>
+
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Replacing an Array items value using <span class="red">[1]</span></h4>
+<script>
+document.write("January ", "May ", "March ", "April ","May");
+document.write("<br />");
+const months = new Array("January", "May", "March", "April","May");
+months[1] = "February";
+document.write(months);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+</body>
+</html>

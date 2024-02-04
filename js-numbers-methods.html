@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	</head>	
+<body>
+
+
+<script type="text/javascript">
+setInterval(()=>{
+document.title = "JavaScript Tutorials";
+},1000);
+
+setInterval(()=>{
+document.title = "JavaScript Numbers Methods";
+},1500);
+</script>
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1> JavaScript Numbers Methods</h1>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is Numbers? --</h3>
+<script type="text/javascript">
+document.write("There are two types of numbers, Integer- Number without decimals and Floating point- numbers with decimal");
+</script>
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Strings In javascript</h4>
+<p id="textresult"></p>
+<script>
+const x = 12;
+const y = 12.56;
+const z = x + y;
+document.write(z);
+</script>
+
+
+<h4>Strings as a number Example</h4>
+<p><span class="red"> addition number as a string is not worked in javascript it will concatinate</span></p>
+<script>
+const sum = "12" + "5";
+document.write(sum);
+</script>
+
+<p><span class="red">number minus </span></p>
+<script>
+const minus = "12" - "5";
+document.write(minus);
+</script>
+
+<p><span class="red">number division </span></p>
+<script>
+const divide = "12" / "5";
+document.write(divide);
+</script>
+
+<p><span class="red">number multiplication </span></p>
+<script>
+const into = "12" * "5";
+document.write(into);
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Performing Operations on Strings and numbers </h4>
+<script type="text/javascript">
+const snadd = "10" + 2;
+document.write(snadd);
+
+document.write("<br />");
+
+const snminus = "10" - 2;
+document.write(snminus);
+
+document.write("<br />");
+
+const snmulti = "10" * 2;
+document.write(snmulti);
+
+document.write("<br />");
+
+const sndivide = "10" / 2;
+document.write(sndivide);
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Performing Hexadecimal Numbers </h4>
+<span class="red"> Hexadecimal number syntax uses a leading 0 followed by a letter x.</span>
+<p id="hexaresult"></p>
+<script type="text/javascript">
+const hn1 = 0xA;
+const hn2 = 0xff;
+const hn3 = 0x123456789ABCDEF;
+document.getElementById("hexaresult").innerHTML = hn1 + "<br />" + hn2 + "<br />" + hn3;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>The Number.isInteger() Method </h4>
+<span class="red">Number.isInteger() Method return true if the passed argument (value) is an integer</span>
+<p id="interesult"></p>
+<script type="text/javascript">
+const in1 = Number.isInteger(22);
+const in2 = Number.isInteger(3,25);
+const in3 = Number.isInteger("hello");
+const in4 = Number.isInteger(1.25);
+document.getElementById("interesult").innerHTML = in1 + "<br />" + in2 + "<br />" + in3 + "<br />" + in4;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>The parseInt() Method </h4>
+<span class="red">parseInt() Method takes a string argument (value) and return an integer based on the given value. Only first number is returned if the next charecters are not numbers.</span>
+<p id="parseresult"></p>
+<script type="text/javascript">
+const pi1 = parseInt(22);
+const pi2 = parseInt("hello");
+const pi3 = parseInt("9,59, hello");
+const pi4 = parseInt(1.25);
+document.getElementById("parseresult").innerHTML = pi1 + "<br />" + pi2 + "<br />" + pi3 + "<br />" + pi4;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>The parseFloat() Method </h4>
+<span class="red">parseFloat() Method takes a string argument (value) and return an floating point number. </span>
+<p id="parsefloatresult"></p>
+<script type="text/javascript">
+const pf1 = parseFloat(22.58);
+const pf2 = parseFloat("25pxhello");
+const pf3 = parseFloat("hello");
+const pf4 = parseFloat	(1);
+document.getElementById("parsefloatresult").innerHTML = pf1 + "<br />" + pf2 + "<br />" + pf3 + "<br />" + pf4;
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>The toFixed() Method </h4>
+<span class="red">toFixed() Method formats a number using fixed-point notation </span>
+<p id="fixedresult"></p>
+<script type="text/javascript">
+const fm1 = (22.123456).toFixed(1);
+const fm2 = (22.123456).toFixed(2);
+const fm3 = (22.123456).toFixed(3);
+const fm4 = (22.123456).toFixed(4);
+document.getElementById("fixedresult").innerHTML = fm1 + "<br />" + fm2 + "<br />" + fm3 + "<br />" + fm4;
+</script>
+
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>The toString() Method </h4>
+<span class="red">toString() Method returns a string </span>
+<p id="tostringresult"></p>
+<script type="text/javascript">
+const tst1 = (22.1236).toString();
+const tst2 = (1.6).toString();
+const tst3 = (25).toString();
+const tst4 = ("ste").toString();
+document.getElementById("tostringresult").innerHTML = tst1 + "<br />" + tst2 + "<br />" + tst3 + "<br />" + tst4;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	</head>	
+<body>
+
+
+<script type="text/javascript">
+setInterval(()=>{
+document.title = "JavaScript Tutorials";
+},1000);
+
+setInterval(()=>{
+document.title = "JavaScript Arrays";
+},1500);
+</script>
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1> JavaScript Arrays</h1>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is an Arrays? --</h3>
+<script type="text/javascript">
+document.write("Array are list-like objects, a single array can store multiple data");
+</script>
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Arrays In javascript</h4>
+<p id="Arrays"></p>
+<script>
+const fruit = ["Apple", "Banana", "Pineapple", "Mango", "Chiku"];
+// document.write(fruit);
+document.getElementById("Arrays").innerHTML = fruit;
+</script>
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Anther way to create Arrays In javascript using <span class="red">new Array()</span> method</h4>
+<script type="text/javascript">
+const cities = new Array("Mumbai", "Delhi", "Pune", "Chennai", "Banglore");
+document.write(cities);	
+</script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Access an Arrays items using <span class="red">[3]</span></h4>
+<script type="text/javascript">
+const cities1 = new Array("Mumbai", "Delhi", "Pune", "Chennai", "Banglore");
+const citiresult = cities1[3];
+document.write(citiresult);
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Add items to an Arrays using <span class="red">push()</span> Methods</h4>
+<script type="text/javascript">
+const subject = new Array("Html", "Css", "Javascript");
+subject.push("Jquery", "Wordpress", "ReactJs");
+document.write(subject);
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Add items to an Arrays using <span class="red">unshift()</span> Methods to front of an array</h4>
+<p id="lang"></p>
+<script type="text/javascript">
+const language = new Array("English", "Hindi");
+language.unshift("Marathi", "Spanish");
+document.getElementById("lang").innerHTML = language;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Remove items to an Arrays using <span class="red">pop()</span> Methods, it will remove last element of an array</h4>
+<script type="text/javascript">
+const vegitable = ["Potato", "Tomato", "Capsicum", "Onion"];
+vegitable.pop();
+document.write(vegitable);
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Remove items to an Arrays using <span class="red">shift()</span> Methods, it will remove first element of array</h4>
+<script type="text/javascript">
+const vegitable1 = new Array("Potato", "Tomato", "Capsicum", "Onion");
+vegitable1.shift();
+document.write(vegitable1);
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Get the length of an Arrays using <span class="red">length()</span> Methods</h4>
+<p id="clothresult"></p>
+<script type="text/javascript">
+document.write("Shirt ", " Jeans", " Cargo", " T-shirt", " Jackets");	
+const cloth = ["Shirt", "Jeans", "Cargo", "T-shirt", "Jackets"];
+document.getElementById("clothresult").innerHTML = cloth.length;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Access the last item an Arrays using <span class="red"> length()</span> Methods</h4>
+<p id="clothresult1"></p>
+<script type="text/javascript">
+document.write("Shirt ", " Jeans", " Cargo", " T-shirt", " Jackets");	
+const cloth1 = ["Shirt", "Jeans", "Cargo", "T-shirt", "Jackets"];
+const lastcloth = cloth1[cloth1.length - 1];
+document.getElementById("clothresult1").innerHTML = lastcloth;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Loop over an Array: Looping over an array accessing its data indivisually <br> We can use the for loop over an array</h4>
+<p id="comapanydata"></p>
+<script type="text/javascript">
+const comapny = new Array("Amazon", "Microsoft", "Apple", "Facebook");
+for (let i = 0; i < comapny.length; i++){
+document.getElementById("comapanydata").innerHTML += comapny[i] + "<br />"; 
+}
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Array are Objects</h4>
+<p id="numerdata"></p>
+<script type="text/javascript">
+document.write(["One", "Two", "Three", "Four", "Five"]);
+
+const numbers = ["One", "Two", "Three", "Four", "Five"];
+const numbertype = typeof numbers;
+document.getElementById("numerdata").innerHTML = numbertype;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+</body>
+</html>
