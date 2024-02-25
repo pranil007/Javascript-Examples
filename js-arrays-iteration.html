@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	</head>	
+<body>
+
+
+<script type="text/javascript">
+setInterval(()=>{
+document.title = "JavaScript Tutorials";
+},1000);
+
+setInterval(()=>{
+document.title = "JavaScript Array Iteration";
+},1500);
+</script>
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1> JavaScript Arrays Iteration Methods</h1>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is an Arrays? --</h3>
+<script type="text/javascript">
+document.write("Array Iteration means performing an operation for each array element, asscesing the value of each array element");
+</script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Using for Loop</h4>
+<script>
+const fruits = ["Apple", "Banana", "Pineapple", "Mango", "Chiku"];
+for (let i = 0; i < fruits.length; i++) {
+document.write(fruits[i] + "<br />")	
+}
+</script>
+<br/>
+<script>
+const bikes = new Array("Hero", "Honda", "TVS", "Bajaj", "Ktm", "Yamaha");
+for (let i = 0; i < bikes.length; i++) {
+document.write(bikes[i] + "<br>");	
+}
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+
+<h4>Using forEach() Method</h4>
+<p>The <span class="red">forEach()</span> method executes a provided function once for each array element,<br>
+It Have one paramater, a <span class="red"> callback function</span></p>
+<p>callback function accepts one to three arguments</p>
+<ul>
+<li><span class="red"> value</span> - the current element being processed</li>
+<li><span class="red"> index</span> - the index of the current element</li>
+<li><span class="red"> array</span>- the array itself</li>
+</ul>
+
+<div id="subjectre"></div>
+<script>
+const subjects = ["Maths", "Science", "Marathi", "English", "History"];
+subjects.forEach(function (value, index, array) {
+document.getElementById("subjectre").innerHTML += '<p> index: ' + index + ' <br> value: ' + value + '</p>';	
+});
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Using map() Method</h4>
+<p>The <span class="red">map()</span> method creates a new array<br>
+each element in the new aaray is changed using the logic in the provided function.</p>
+<p>provided function accepts one to three arguments</p>
+<ul>
+<li><span class="red"> value</span> - the current element being processed</li>
+<li><span class="red"> index</span> - the index of the current element</li>
+<li><span class="red"> array</span>- the array itself</li>
+</ul>
+
+<div id="numbersdata"></div>
+<script>
+const numbers = [10,20,30,40,50];
+const numberstwo = numbers.map(function (a) {
+	 return a * 2;
+});
+document.write(numberstwo);
+// document.getElementById("numbersdata").innerHTML += numberstwo;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Using filter() Method</h4>
+<p>The <span class="red">filter()</span> method creates a new array.</p>
+<p>The new array only contains the elements that passed the test implemented by the provided parameter function.</p>
+<p>provided function accepts one to three arguments</p>
+<ul>
+<li><span class="red"> value</span> - the current element being processed</li>
+<li><span class="red"> index</span> - the index of the current element</li>
+<li><span class="red"> array</span>- the array itself</li>
+</ul>
+
+<div id="numbersdata2"></div>
+<script>
+const numbers2 = [1,20,3,4,5,6];
+const numbersfilter = numbers2.filter(function (a) {
+		return a < 20;
+});
+// document.write(numbersfilter);
+ document.getElementById("numbersdata2").innerHTML += numbersfilter;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+</body>
+</html>

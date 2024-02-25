@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	</head>	
+<body>
+
+
+<script type="text/javascript">
+setInterval(()=>{
+document.title = "JavaScript Tutorials";
+},1000);
+
+setInterval(()=>{
+document.title = "JavaScript Arrays Sorting Methods";
+},1500);
+</script>
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1> JavaScript Arrays Sorting Methods</h1>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is an Arrays? --</h3>
+<script type="text/javascript">
+document.write("Array are list-like objects, a single array can store multiple data");
+</script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Arrays In javascript</h4>
+<p id="Arrays"></p>
+<script>
+const fruit = ["Apple", "Banana", "Pineapple", "Mango", "Chiku"];
+// document.write(fruit);
+document.getElementById("Arrays").innerHTML = fruit;
+</script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>The Sort Array Method</h4>
+<p>The <span class="red">sort()</span> methods sort the element of array. Ascending is the default sort order.</p>
+
+<script>
+const subjects = new Array("Marathi", "English", "Science", "History", "Social Science");
+subjects.sort();
+document.write(subjects);
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Sorting Numbers with (a,b)</h4>
+<p>Sort Arrey in Ascending oreder</p>
+<script>
+const ascendingarrey = new Array(5,4,9,7,2,6,1);
+ascendingarrey.sort(function (a, b) {
+	return a - b;
+});
+document.write(ascendingarrey);
+</script>
+
+<p>Sort Arrey in Descending order</p>
+<script>
+const descendingarrey = new Array(5,4,9,7,2,6,1);
+descendingarrey.sort(function (a, b) {
+	return b - a;
+});
+document.write(descendingarrey);
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Sorting Numbers with CompareFunction(a,b)</h4>
+<p>Sort Arrey in Ascending oreder</p>
+<script>
+const ace1 = new Array(5,4,8,7,2,6,3);
+ace1.sort(compareFunction);
+function compareFunction(a, b) {
+	return a - b;
+}
+document.write(ace1);
+</script>
+
+<p>Sort Arrey in Descending oreder</p>
+<script>
+const dec1 = new Array(5,4,8,7,2,6,3);
+dec1.sort(compareFunction);
+function compareFunction(a,b){
+return b - a;
+}
+document.write(dec1);
+</script>
+
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Get The Highest or Lowest Value</h4>
+<p>54,414,84,7,20,6174,34</p>
+<p>Get Highest Value First</p>
+<script>
+const hv1 = [54,414,84,7,20,6174,34];
+hv1.sort(function (a,b) {
+return b - a;	
+});
+const hv1result = hv1[0];
+document.write(hv1result);
+</script>
+
+<p>Get Highest Value First</p>
+<script>
+const lv1 = [54,414,84,7,20,6174,34];
+lv1.sort(compareFunction);
+function compareFunction(a,b) {
+	return a - b;
+}
+const lv1result = lv1[0];
+document.write(lv1result);
+</script>
+
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Sorting of an Array of Objects</h4>
+<div id="studentsresult"></div>
+<script>
+const students = [
+{name: "Glenn", age: "55"},
+{name: "Alex", age: "28"},
+{name: "Mark", age: "35"},
+{name: "Rio", age: "40"},
+];
+students.sort(compareFunction);
+function compareFunction(a,b) {
+	return a.age - b.age;
+}
+for (let i = 0; i < students.length; i++) {
+document.getElementById("studentsresult").innerHTML += '<p>Name: ' + students[i].name +  '<br> Age: ' + students[i].age + '</p>'; 
+}
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+<h4>Reverse  an Array </h4>
+<p>["Apple", "Mango", "Pineapple", "Gauva", "Chiku"];</p>
+<script>
+const rearray = ["Apple", "Mango", "Pineapple", "Gauva", "Chiku"];
+rearray.reverse();
+document.write(rearray);
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+</body>
+</html>

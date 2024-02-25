@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+ 
+<script>
+setInterval(() => {
+    document.title = "Math Objects"
+}, 1000);
+ </script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1> JavaScript Math Object Methods</h1>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is an Math Object? --</h3>
+<script type="text/javascript">
+document.write("The Math object conatins build-in properties and method that allow us to do mathamatical tasks.");
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>The ceil() Method</h4>
+<p>The Math.ceil method rounds up a number to nearest whole number or integer.</p>
+<p><span class="red" id="demo"></span></p>
+<script>
+const num1 = Math.ceil(.90);
+const num2 = Math.ceil(6.26);
+const num3 = Math.ceil(26.8);
+document.getElementById("demo").innerHTML = num1 + "<br />" + num2 + "<br />" + num3;
+</script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>The floor() Method</h4>
+<p>The Math.floor method rounds down a number to nearest whole number or integer.</p>
+<p><span class="red" id="floor"></span></p>
+<script>
+const num4 = Math.floor(4.36);
+const num5 = Math.floor(24.70);
+const num6 = Math.floor(9.10);
+document.getElementById("floor").innerHTML = num4 + "<br />" + num5 + "<br />" + num6;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>The round() Method</h4>
+<p>The Math.roud method rounds a number to nearest whole number or integer.</p>
+<p><span class="red" id="round"></span></p>
+<script>
+const num7 = Math.round(4.36);
+const num8 = Math.round(24.70);
+const num9 = Math.round(9.10);
+const num10 = Math.round(-5.8);
+document.getElementById("round").innerHTML = num7 + "<br />" + num8 + "<br />" + num9 + "<br />" + num10;
+</script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+
+<h4>The sqrt() Method</h4>
+<p>The Math.sqrt method rounds a square root of a number. It returns Nan when number is negative.</p>
+<p><span class="red" id="sqrt"></span></p>
+<script>
+const num11 = Math.sqrt(4);
+const num12 = Math.sqrt(16);
+const num13 = Math.sqrt(-9);
+document.getElementById("sqrt").innerHTML = num11 + "<br />" + num12 + "<br />" + num13;
+</script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+
+<h4>The cbrt() Method</h4>
+<p>The Math.sqrt method rounds a cube root of a number.</p>
+<p><span class="red" id="cbrt"></span></p>
+<script>
+const num14 = Math.cbrt(8);
+const num15 = Math.cbrt(-27);
+const num16 = Math.cbrt(94);
+document.getElementById("cbrt").innerHTML = num14 + "<br />" + num15 + "<br />" + num16;
+</script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+
+<h4>The abs() Method</h4>
+<p>The Math.abs method retruns a absolute value of number.</p>
+<p><span class="red" id="abs"></span></p>
+<script>
+const num17 = Math.abs(8.25);
+const num18 = Math.abs(-27);
+const num19 = Math.abs(0.94);
+document.getElementById("abs").innerHTML = num17 + "<br />" + num18 + "<br />" + num19;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+
+<h4>The max() Method</h4>
+<p>The Math.max method retruns a largest number from a given array elements.</p>
+<p><span class="red" id="max"></span></p>
+<script>
+const num20 = Math.max(125, 8, 255, 32);
+const num21 = Math.max(-125, -8, -255, -32);
+document.getElementById("max").innerHTML = num20 + "<br />" + num21;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+
+<h4>The min() Method</h4>
+<p>The Math.min method retruns a smallest number from a given array elements.</p>
+<p><span class="red" id="min"></span></p>
+<script>
+const num22 = Math.min(125, 8, 255, 32);
+const num23 = Math.min(-125, -8, -255, -32);
+document.getElementById("min").innerHTML = num22 + "<br />" + num23;
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+
+<h4>The pow() Method</h4>
+<p>The Math.pow method retruns the base to the exponent power. <br> It takes 2 arguments: base, exponent. <br> In the example below
+2 is raised ti the power of 3. That is, 2*2*2=8</p>
+<p><span class="red" id="pow"></span></p>
+<script>
+const num24 = Math.pow(2, 3);
+document.getElementById("pow").innerHTML = num24;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+<br />
+<br />
+</body>
+</html>

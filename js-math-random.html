@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+ 
+<script>
+setInterval(() => {
+    document.title = "Math Random Method"
+}, 1000);
+ </script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1> JavaScript Math Random Methods</h1>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is an Math random() Method? --</h3>
+<script type="text/javascript">
+document.write("The Math.random() method return a random floating-point (number with decimals) between 0 (inclided) and 1 (excluded)");
+</script>
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>The random() Method</h4>
+<p>The Math.random() method return a random floating-point (number with decimals) between 0 (included) and 1 (excluded).</p>
+<p><span class="red" id="random"></span></p>
+<script>
+const num1 = Math.random();
+document.getElementById("random").innerHTML = num1;
+</script>
+
+
+
+
+<h4>Get Random integer between two numbers</h4>
+<p>To get random floating (numbers with decimal) between 0 (inclusive) and 1 (exclusive).</p>
+<p><span class="red" id="randominte"></span></p>
+<button onclick="getRandomInt(11, 15)">Click Me</button>
+<script>
+function getRandomInt(min, max){
+document.getElementById("randominte").innerHTML = Math.floor(Math.random() * (max - min)) + min;
+
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+<br />
+<br />
+</body>
+</html>
