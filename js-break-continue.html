@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<script>
+setInterval(()=>{
+document.title = "JavaScript Control Flow"
+}, 1000);
+
+setInterval(()=>{
+document.title = "Breck and Continue Statement"
+},1500);
+
+ </script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1> JavaScript Breck and Continue Statement </h1>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is Breck Statement? --</h3>
+<script type="text/javascript">
+document.write("The Breck statement terminates the execution of current loop. after termination, the execution proceeds to next statement following the loop.");
+</script>
+
+
+
+
+<h3>The breck statement below</h3>
+<p id="demo"></p>
+<script>
+ let html = "";
+ for (let i = 0; i < 15; i++) {
+   if (i == 10) {
+    break;
+   }
+    html += "<li> Number " + i + "</li>";
+ }
+ document.getElementById("demo").innerHTML = html;
+</script>
+
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is Continue Statement? --</h3>
+<p>The Continue statement terminates execution of the statements in the current iteration of the current loop.</p>
+<p>and Continue the execuation of the loop with the next iteration</p>
+
+<p id="demoo"></p>
+<script>
+let htmll = "";
+for (let i = 0; i < 15; i++) {
+    if (i == 5) {
+        continue;
+    }
+    htmll += "<li> Number " + i + "</li>";
+}
+document.getElementById("demoo").innerHTML = htmll;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+<br />
+<br />
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<script>
+setInterval(()=>{
+document.title = "JavaScript Control Flow"
+}, 1000);
+
+setInterval(()=>{
+document.title = "for loop"
+},1500);
+
+ </script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1> JavaScript for loop </h1>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is for loop ? --</h3>
+<script type="text/javascript">
+document.write("A for loop executes statements repeatedly as long as the specified condition is met");
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<ul>
+<li>initialExpression - this intiilaized a loop counter</li>
+<li>condition - if it is true, the loop statements execute. if false, the statements don't execute</li>
+<li>incrementExpression - increments the loop countet, runs everytime the statements are executed.</li>
+</ul>
+
+
+<h3>The statement below will run 5 times</h3>
+<script>
+    for (let i = 0; i < 5; i++) {
+document.write("<p> Hello for Loop </p>");        
+    }
+</script>
+
+
+<h3>Display array using for loop</h3>
+<p id="citiess"></p>
+<script>
+const cities = ["Mumbai", "Chennai", "Pune", "Banglore"];
+let html ="";
+for (let i = 0; i < cities.length; i++) {
+   html += "<p>" + cities[i] + "</p>";
+    
+}
+document.getElementById("citiess").innerHTML = html;
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>for of... Loop</h3>
+<p>the for of statement loops over iterable objects</p>
+Syntax <Br>
+<code>
+for (varible of iterable){
+
+}
+</code>
+
+
+<ul>
+<li>varible - on each iteration the value of the property is assigned to varible.</li>
+<li>iterable - the iterable object being iterated over</li>
+</ul>
+
+
+
+<h3>looping over array</h3>
+<script>
+const city = ["Mumbai", "Chennai", "Pune", "Banglore"];
+for (value of city) {
+   document.write(value + "<br>"); 
+}
+</script>
+
+<h3>looping over string</h3>
+<script>
+const string = "Pranil";
+for (value of string) {
+    document.write(value + "<br>"); 
+ 
+}
+
+
+
+</script>
+
+
+<br />
+<br />
+<br />
+<br />
+</body>
+</html>

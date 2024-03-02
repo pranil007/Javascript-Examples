@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<script>
+setInterval(()=>{
+document.title = "JavaScript Control Flow"
+}, 1000);
+
+setInterval(()=>{
+document.title = "while loop"
+},1500);
+
+ </script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1> JavaScript while loop </h1>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is while loop ? --</h3>
+<script type="text/javascript">
+document.write("The while loop executes statements as long as the given condition evaluates true");
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<ul>
+<li>condition - the expression evaluted, if it evaluates to true, the code blocks are executed. if false, the loop stops.</li>
+<li>statement - the code blocks to be executed as long as the condition is true</li>
+</ul>
+
+<h3>The statement below will run 5 times</h3>
+<script>
+    let i = 0;
+    while (i < 5) {
+        document.write("<p> Hello while loop </p>");
+        i++;
+    }
+</script>
+
+
+
+<h3>looping over an array</h3>
+<p id="demo"></p>
+<script>
+const fruits = ["Apple", "Banana", "Mango", "Orange", "Kiwi"];
+const len = fruits.length;
+let ii = 0;
+let html = "";
+while (ii < len) {
+    html += "<p> i like " + fruits[ii] + ". </p>";
+    ii++;
+}
+document.getElementById("demo").innerHTML = html;
+</script>
+
+
+<h3>Do while loop</h3>
+<p>do while loop executes statements until the test condition evaluates to false</p>
+<ul>
+    <li>statement - the code blocks executed and is re-executed each time the condition is true</li>
+    <li>condition - the expression evaluted, if it evaluates to true. the code blocks re-excute. if false, the loop stops</li>
+</ul>
+
+<h3>The statement below will run 3 times</h3>
+<script>
+let iii = 0;
+do {
+    document.write("<p> Hello do while loop </p>");
+    iii++;
+} while (iii < 3);
+</script>
+
+
+
+
+
+<h3>Looping Over an Array Using do...while Loop</h3>
+<p id="demoo"></p>
+<script>
+const states = ["Maharashtra", "Delhi", "Punjab", "Chennai"];
+const lett =  states.length;
+let s = 0;
+let htmll = "";
+do {
+   htmll += "<p> i like " + states[s] + ". </p>";
+   s++;
+} while (s < lett);
+
+document.getElementById("demoo").innerHTML = htmll;
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+<br />
+<br />
+</body>
+</html>

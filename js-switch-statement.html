@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<script>
+setInterval(()=>{
+document.title = "JavaScript Control Flow"
+}, 1000);
+
+setInterval(()=>{
+document.title = "Switch statement"
+},1500);
+
+ </script>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h1> JavaScript Switch statement</h1>
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h3>-- What is Switch method? --</h3>
+<script type="text/javascript">
+document.write("The if statement excutes a block of codes if the given condition is true.");
+</script>
+
+
+
+<!-- -------------------------------------------------------------------------- 
+------------------------------------------------------------------------------- -->
+
+<h4>Instead of writing a multiple if() statements, we can shorten the code with swith statement.</h4>
+
+<script>
+const fruit = "orange";
+switch (fruit) {
+    case "Apple":
+        document.write("Apple color is red");
+        break;
+
+    case "mango":
+    document.write("Mango color is yellow");
+        break;
+
+        case "orange":
+        document.write("orange color is orange");
+        break;
+}
+</script>
+<p></p>
+<script>
+const city = "Mumbai";
+switch (city) {
+    case "Mumbai":
+        document.write("Mumbai Is Capital Of Maharashtra");
+        break;
+
+        case "Chennai":
+        document.write("Chennai Is Capital Of Tamilnadu");
+        break;
+
+        default:
+            document.write("India is my country");
+}
+</script>
+
+
+<h3>Illustrative Example</h3>
+<label>Select Product</label>
+<select id="products" onchange="checkPrice()">
+<option value="Mobile">Mobile</option>
+<option value="Tv">Tv</option>
+<option value="Refrigerator">Refrigerator</option>
+<option value="Washing Machine">Washing Machine</option>
+<option value="Laptop">Laptop</option>
+</select>
+<p>Price of <span class="red" id="price"></span></p>
+<script>
+function checkPrice() {
+    const product = document.getElementById("products").value;
+    let amount;
+
+    switch (product) {
+        case "Mobile":
+            amount = "7000";
+            document.getElementById("price").innerHTML = product + " is " + amount;
+            break;
+            case "Tv":
+            amount = "12000";
+            document.getElementById("price").innerHTML = product + " is " + amount;
+            break;
+
+            case "Refrigerator":
+            amount = "15000";
+            document.getElementById("price").innerHTML = product + " is " + amount;
+            break;
+
+            case "Washing Machine":
+            amount = "27000";
+            document.getElementById("price").innerHTML = product + " is " + amount;
+            break;
+
+            case "Laptop":
+            amount = "40000";
+            document.getElementById("price").innerHTML = product + " is " + amount;
+            break;
+        default:
+            break;
+    }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+<br />
+<br />
+</body>
+</html>
